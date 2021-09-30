@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Url shortener";
+}
+<html>
+    <body>
+        <div class="form-group col-12 text-center">
+          <input class="form-control mb-3" id="url" placeholder="Enter the link here...">
+          <button id="short-btn" type="submit" class="btn btn-primary mb-4">Short Url!</button>
+        </div>
+        <div class="container col-12 raw-4" id="outputInfo"></div>
+    </body>
+</html>
+
+@section scripts {
+    <script src="~/js/site.min.js"></script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
