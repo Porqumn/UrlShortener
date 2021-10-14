@@ -30,9 +30,9 @@ namespace UrlShortener
             services.AddRazorPages();
             services.AddControllers();
             services.AddEntityFrameworkSqlite().AddDbContext<UrlContext>();
-            services.AddSingleton<IUrlRepository, UrlRepository>();
-            services.AddSingleton<IUrlValidator, UrlValidator>();
-            services.AddSingleton<IUrlService, UrlService>();
+            services.AddScoped<IUrlRepository, UrlRepository>();
+            services.AddScoped<IUrlValidator, UrlValidator>();
+            services.AddScoped<IUrlService, UrlService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
